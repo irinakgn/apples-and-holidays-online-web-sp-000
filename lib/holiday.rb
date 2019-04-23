@@ -73,5 +73,7 @@ def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
 
-  holiday_hash.deep_traverse{ |path,value| p [ path, value ] }
+  holiday_hash.each_value do |value|
+  puts "Value: #{value}"
+  end
 end
