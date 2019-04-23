@@ -73,11 +73,7 @@ def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
 
-  holiday_hash.flatten.each_with_index do |v, index|
-    myHash.each {|key, value|
-  value.is_a?(Hash) ? save_pair(key, value) :
-          puts("parent=#{parent.nil? ? 'none':parent}, (#{key}, #{value})")
-}
+  holiday_hash.deep_traverse{ |path,value| p [ path, value ] }
 
   end
 
