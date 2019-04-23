@@ -81,7 +81,7 @@ def all_holidays_with_bbq(holiday_hash)
       item_values =value.values[0]
       # puts "#{key} #{item_values}"
       if item_values.include? 'BBQ'
-        fn.push(key[0].to_s)
+        fn.push(key[0])
       end
     end
   end
