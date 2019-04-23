@@ -74,9 +74,11 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
 
   holiday_hash.flatten.each_with_index do |v, index|
-    if ['spring', 'summer' , 'winter' , 'fall'].include?(v) == true
-      puts "#{index} #{v}"
-    end
+    myHash.each {|key, value|
+  value.is_a?(Hash) ? save_pair(key, value) :
+          puts("parent=#{parent.nil? ? 'none':parent}, (#{key}, #{value})")
+}
+
   end
 
 end
